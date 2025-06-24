@@ -1,0 +1,60 @@
+@import './variables';
+@import './legal-page';
+
+.terms-and-conditions {
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    li {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      color: $text-color;
+
+      &::marker {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: $text-color;
+    font-style: italic;
+  }
+
+  // 🔄 Responsive styles
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    li, p {
+      font-size: 0.95rem;
+    }
+
+    ol {
+      padding-left: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .legal-page {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    li, p {
+      font-size: 0.9rem;
+    }
+  }
+}

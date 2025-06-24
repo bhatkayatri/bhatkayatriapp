@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+/* 🌌 Dark psychedelic animated background */
+body {
+  font-family: 'Neucha', cursive, sans-serif;
+  background: linear-gradient(270deg,
+    #2b0037,  /* mystic purple */
+    #0d1b2a,  /* deep midnight blue */
+    #3a0ca3,  /* electric indigo */
+    #1f4068,  /* shadowy blue */
+    #301934,  /* dusty dark magenta */
+    #003049,  /* trek cyan navy */
+    #2b0037   /* loop back */
+  );
+  background-size: 400% 400%;
+  animation: endlessPsyFlow 80s linear infinite;
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0;
+  animation: fadeIn 2s ease-in-out;
+  overflow-x: hidden;
+}
+
+/* 🎞️ Infinite smooth background flow */
+@keyframes endlessPsyFlow {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌫️ Optional: floating glow blobs overlay */
+.dark-glow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #ff00cc22, transparent 50%),
+              radial-gradient(circle at 80% 80%, #00f0ff22, transparent 50%),
+              radial-gradient(circle at 60% 40%, #ff149322, transparent 50%);
+  animation: floatOverlay 30s ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* 🎈 Blobs float around endlessly */
+@keyframes floatOverlay {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  50%  { transform: translate(-30px, 40px) scale(1.1); }
+  100% { transform: translate(20px, -30px) scale(1.2); }
+}
+
+/* 🌀 Content fade-in animation */
+@keyframes fadeIn {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 🧹 Basic reset styles */
+a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,99 @@
+@import './variables';
+@import './legal-page';
+
+.cancellations-and-refunds {
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $primary-color;
+    border-left: 4px solid $primary-color;
+    padding-left: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: $text-color;
+  }
+
+  ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      position: relative;
+      padding-left: 1.2rem;
+
+      &::before {
+        content: '✔';
+        position: absolute;
+        left: 0;
+        color: $primary-color;
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .returns-section {
+    background-color: lighten($primary-color, 42%);
+    padding: 1rem;
+    border-left: 4px solid $primary-color;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+
+  // 🔄 Responsive styles
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      padding-left: 0.5rem;
+    }
+
+    p, li {
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .returns-section {
+      padding: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .legal-page {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p, li {
+      font-size: 0.9rem;
+    }
+
+    .returns-section {
+      padding: 0.6rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import './variables';
+@import './legal-page';
+
+.contact-us {
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: $text-color;
+
+    strong {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: $primary-color;
+    }
+
+    a {
+      color: $primary-color;
+      font-weight: 500;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &::before {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+
+    &:nth-of-type(3)::before { content: '📍'; }
+    &:nth-of-type(4)::before { content: '📧'; }
+    &:nth-of-type(5)::before { content: '📞'; }
+    &:nth-of-type(6)::before { content: '🕒'; }
+    &:nth-of-type(7)::before { content: 'ℹ️'; }
+  }
+}

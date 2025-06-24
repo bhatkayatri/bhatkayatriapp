@@ -1,0 +1,35 @@
+.collection-page {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 38px;
+    margin: 0 auto 30px;
+    text-align: center; // Center title on all devices
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    .collection-item {
+      margin-bottom: 30px;
+    }
+
+    // Tablet (≤1024px): 3 columns
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Mobile landscape / small tablet (≤768px): 2 columns
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Mobile portrait (≤480px): 1 column
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

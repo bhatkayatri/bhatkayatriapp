@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`take snapshot 1`] = `
+<div
+  className="collection-preview"
+>
+  <h1
+    className="title"
+  >
+    HATS
+  </h1>
+  <div
+    className="preview"
+  >
+    <PreviewCollectionItem
+      imageUrl="https://i.ibb.co/ZYW3VTp/brown-brim.png"
+      key="1"
+      name="Brown Brim"
+      price={25}
+    />
+  </div>
+</div>
+`;
