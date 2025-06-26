@@ -168,9 +168,16 @@
       }
 
       .cart-icon-wrapper {
+        position: relative;
+
         .cart-dropdown {
           top: 60px;
-          right: 0;
+          right: -20px;  // Shifted 20px to the right outside the wrapper
+          width: 240px;
+
+          &::before {
+            right: 30px; // Adjust arrow position to still point to cart icon
+          }
         }
       }
     }
