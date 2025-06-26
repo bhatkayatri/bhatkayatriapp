@@ -1,7 +1,7 @@
 .checkout-item {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  min-height: 100px;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
   font-size: 20px;
@@ -26,15 +26,15 @@
 
   .right-group {
     display: flex;
-    flex: 1;
+    width: 54%; // 23 + 23 + 8
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 
     .quantity {
+      width: 23%;
       display: flex;
       align-items: center;
-      color: orangered;
 
       .arrow {
         cursor: pointer;
@@ -49,37 +49,25 @@
     }
 
     .price {
+      width: 23%;
       color: #fff;
-      white-space: nowrap;
     }
 
     .remove-button {
-      cursor: pointer;
+      width: 8%;
       font-size: 24px;
-      padding-left: 12px;
+      text-align: center;
+      cursor: pointer;
     }
   }
 
   @media (max-width: 768px) {
-    .image-container {
-      width: 100%;
-      padding-right: 0;
-      margin-bottom: 10px;
-    }
-
-    .name {
-      width: 100%;
-      margin-bottom: 10px;
-    }
+    font-size: 16px;
 
     .right-group {
-      width: 100%;
-      justify-content: space-between;
-      flex-wrap: nowrap;
+      width: 54%;
 
-      .quantity,
-      .price,
-      .remove-button {
+      .quantity, .price, .remove-button {
         font-size: 16px;
       }
     }
@@ -89,11 +77,11 @@
     font-size: 14px;
 
     .right-group {
-      .quantity .arrow {
+      .arrow {
         font-size: 16px;
       }
 
-      .quantity .value {
+      .value {
         margin: 0 6px;
       }
     }
